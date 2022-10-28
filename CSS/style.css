@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    max-width: 1000px;
+    width: 100%;
+    margin: 70px auto 30px;
+    background-color: whitesmoke;
+}
+
+.content {
+    background-color: white;
+}
+
+.content__secondHeader {
+    padding: 10px 20px;
+    border-bottom: 2px solid lightgray;
+}
+
+.content__list {
+    list-style: none;
+}
+
+.content__done {
+    text-decoration: line-through;
+}
