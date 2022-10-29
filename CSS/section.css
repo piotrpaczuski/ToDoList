@@ -11,18 +11,21 @@
     cursor: pointer;
 }
 
+.section__buttonAdd:hover {
+    background-color: hsl(120, 47%, 63%);
+}
+
 .section__buttonRemove {
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: hsl(0, 81%, 58%);
     color: white;
     border: none;
     cursor: pointer;
 }
 
-.section-tasksList {
-    min-height: 100px;
-    padding-bottom: 10px;
+.section__buttonRemove:hover {
+    background-color: hsl(0, 81%, 70%);
 }
 
 .section__secondHeader {
@@ -34,11 +37,13 @@
     list-style: none;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .section__listItem {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .section__done {
