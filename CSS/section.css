@@ -1,0 +1,46 @@
+.section {
+    background-color: white;
+}
+
+.section__buttonAdd {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(76, 190, 76);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.section__buttonRemove {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.section-tasksList {
+    min-height: 100px;
+    padding-bottom: 10px;
+}
+
+.section__secondHeader {
+    padding: 10px 20px;
+    border-bottom: 2px solid lightgray;
+}
+
+.section__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 0 20px;
+}
+
+.section__listItem {
+    padding: 10px;
+}
+
+.section__done {
+    text-decoration: line-through;
+}
