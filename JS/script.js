@@ -35,10 +35,13 @@
 
     const onFormButton = () => {
 
+        const input = document.querySelector(".js-newTask");
         const button = document.querySelector(".js-button");
         button.addEventListener("click", (event) => {
             event.preventDefault();
             addNewTask();
+            input.value = "";
+            input.focus();
         });
     }
 
@@ -66,11 +69,11 @@
 
         for (const task of tasks){
             htmlString += `
-            <li${task.done ? " class=\"content__done\"" : " class=\"\"" }>
-            <button class="js-done">Zrobione</button>
+            <button class="section__buttonAdd js-done">${task.done ? "✔" : ""}</button>
+            <li${task.done ? " class=\"section__listItem section__done\"" : " class=\"section__listItem\"" }>
                 ${task.name}
-            <button class="js-remove">Usuń zadanie</button>
             </li>
+            <button class="section__buttonRemove js-remove">🗑</button>
             `;
         };
 
