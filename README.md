@@ -3,6 +3,8 @@
 ## Demo
 [Project](https://piotrpaczuski.github.io/ToDoList/)
 
+<img src="IMG/share.png" alt="layout" width="400px">
+
 ## Description
 The web application allows you, to save tasks to be done soon on the board.  
 The green button allows you to mark the task as completed. 
