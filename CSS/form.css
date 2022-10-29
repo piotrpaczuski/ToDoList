@@ -5,6 +5,13 @@
     gap: 20px;
 }
 
+@media (max-width: 767px) {
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .form__input {
     width: 100%;
     max-width: 820px;
@@ -16,4 +23,11 @@
     background-color: teal;
     color: white;
     padding: 5px;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .form__button {
+        width: 100%;
+    }
 }
