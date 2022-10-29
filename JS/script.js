@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            name: "Nauczyć się FrontEnd'u",
-            done: false,
-        },
-        {
-            name: "Zrobić pracę domową!",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const addNewTask = () => {
         const newTask = document.querySelector(".js-newTask").value.trim();
@@ -35,13 +26,13 @@
 
     const onFormButton = () => {
 
-        const input = document.querySelector(".js-newTask");
+        const newTask = document.querySelector(".js-newTask");
         const button = document.querySelector(".js-button");
         button.addEventListener("click", (event) => {
             event.preventDefault();
             addNewTask();
-            input.value = "";
-            input.focus();
+            newTask.value = "";
+            newTask.focus();
         });
     }
 
@@ -70,7 +61,7 @@
         for (const task of tasks){
             htmlString += `
             <button class="section__buttonAdd js-done">${task.done ? "✔" : ""}</button>
-            <li${task.done ? " class=\"section__listItem section__done\"" : " class=\"section__listItem\"" }>
+            <li class="section__listItem${task.done ? " section__done" : "" }">
                 ${task.name}
             </li>
             <button class="section__buttonRemove js-remove">🗑</button>
