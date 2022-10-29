@@ -11,4 +11,6 @@ html {
     margin: 0 auto;
     padding: 20px;
     background-color: whitesmoke;
+    word-break: break-word;
+    font-family: 'Montserrat', sans-serif;
 }
