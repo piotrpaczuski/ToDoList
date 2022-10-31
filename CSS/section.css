@@ -9,6 +9,7 @@
     color: white;
     border: none;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .section__buttonAdd:hover {
@@ -22,6 +23,7 @@
     color: white;
     border: none;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .section__buttonRemove:hover {
@@ -35,8 +37,6 @@
 
 .section__list {
     list-style: none;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
     padding: 20px;
 }
 
@@ -44,6 +44,11 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
 }
 
 .section__done {
