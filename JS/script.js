@@ -24,7 +24,7 @@
         render();
     }
 
-    const onFormButton = () => {
+    const bindNewTaskButton = () => {
 
         const newTask = document.querySelector(".js-newTask");
         const button = document.querySelector(".js-button");
@@ -36,7 +36,7 @@
         });
     }
 
-    const eventButtons = () => {
+    const bindListButtonsEvents = () => {
         const doneButton = document.querySelectorAll(".js-done");
         doneButton.forEach((doneButton, taskIndex) => {
             doneButton.addEventListener("click", (event) => {
@@ -60,9 +60,11 @@
 
         for (const task of tasks){
             htmlString += `
-            <li class="section__listItem${task.done ? " section__done" : "" }">
+            <li class="section__listItem">
                 <button class="section__buttonAdd js-done">${task.done ? "✔" : ""}</button>
-                ${task.name}
+                <span class="${task.done ? "section__done" : "" }">
+                    ${task.name}
+                </span>
                 <button class="section__buttonRemove js-remove">🗑</button>
             </li>
             `;
@@ -70,11 +72,11 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        eventButtons();
+        bindListButtonsEvents();
     };
 
     const init = () => {
-        onFormButton();
+        bindNewTaskButton();
     };
 
     init();
