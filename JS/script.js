@@ -1,5 +1,5 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = () => {
         const newTask = document.querySelector(".js-newTask").value.trim();
@@ -7,10 +7,11 @@
             return;
         }
 
-        tasks.push({
-            name: newTask,
-        })
-
+        tasks = [
+            ...tasks,
+            {name: newTask},
+        ];
+        
         render();
     };
 
