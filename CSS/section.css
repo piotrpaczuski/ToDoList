@@ -1,5 +1,6 @@
 .section {
     background-color: white;
+    margin-bottom: 30px;
 }
 
 .section__buttonAdd {
@@ -35,6 +36,44 @@
     border-bottom: 2px solid lightgray;
 }
 
+.section__secondHeader-tasksList {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* align-items: center; */
+}
+
+@media (max-width: 767px) {
+    .section__secondHeader-tasksList {
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+        grid-template-columns: auto;
+    }
+}
+
+.section__buttons {
+    border: none;
+    color: hsl(180, 100%, 25%);
+    background: transparent;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+    .section__buttons-centred {
+        display: grid; 
+    }
+}
+
+.section__buttons:hover {
+    color: hsl(180, 100%, 40%);
+    cursor: pointer;
+}
+
+.section__buttons:disabled {
+    color: grey;
+    cursor: auto;
+}
+
 .section__list {
     list-style: none;
     padding: 20px;
@@ -49,6 +88,10 @@
     padding: 10px;
     align-items: center;
     border-bottom: 2px solid lightgray;
+}
+
+.section__listItem-hidden {
+    display: none;
 }
 
 .section__done {

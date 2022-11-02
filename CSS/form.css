@@ -38,4 +38,7 @@
     .form__button {
         width: 100%;
     }
+    .form__button:hover {
+        transform: scale(1.03);
+    }
 }
