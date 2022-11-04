@@ -36,14 +36,13 @@
     border-bottom: 2px solid lightgray;
 }
 
-.section__secondHeader-tasksList {
+.section__secondHeader--tasksList {
     display: grid;
     grid-template-columns: 1fr auto;
-    /* align-items: center; */
 }
 
 @media (max-width: 767px) {
-    .section__secondHeader-tasksList {
+    .section__secondHeader--tasksList {
         display: grid;
         grid-template-rows: 1fr auto auto;
         grid-template-columns: auto;
@@ -59,8 +58,14 @@
 }
 
 @media (max-width: 767px) {
+    .section__buttons {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
     .section__buttons-centred {
-        display: grid; 
+        display: grid;
     }
 }
 
