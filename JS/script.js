@@ -2,12 +2,7 @@
     let tasks = [];
     let hideDoneTasks = false;
 
-    const addNewTask = () => {
-        const newTask = document.querySelector(".js-newTask").value.trim();
-        if (newTask === "") {
-            return;
-        }
-
+    const addNewTask = (newTask) => {
         tasks = [
             ...tasks,
             { name: newTask },
@@ -51,14 +46,17 @@
     }
 
     const bindNewTaskButton = () => {
-
-        const newTask = document.querySelector(".js-newTask");
         const button = document.querySelector(".js-button");
+
         button.addEventListener("click", (event) => {
             event.preventDefault();
-            addNewTask();
-            newTask.value = "";
-            newTask.focus();
+            const newTask = document.querySelector(".js-newTask");
+
+            if (newTask.value.trim()) {
+                addNewTask(newTask.value.trim());
+                newTask.value = "";
+                newTask.focus();
+            }
         });
     }
 
@@ -87,7 +85,7 @@
         if (tasks.length) {
             htmlString += `
             <button class="section__buttons js-hideDoneTasks">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-            <button class="section__buttons js-doneAllTasks"${tasks.every(({done}) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
+            <button class="section__buttons js-doneAllTasks"${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
             `;
         }
         else {
